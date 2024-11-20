@@ -1,18 +1,18 @@
 from gtts import gTTS
 import random
 
-KB_limit = 9  # -1 for all
+KB_limit = 99  # -1 for all
 vocab = []
 
 # Load nouns from the file
-with open("nouns.txt", encoding="UTF-8") as f:
+with open("actions.txt", encoding="UTF-8") as f:
     vocab = f.read().splitlines()  # Fix: Load lines directly into the `vocab` list
 
 # Text-to-speech function
 def text_to_speech(text):
     tts = gTTS(text, lang="en")
-    tts.save("nouns.mp3")
-    print("Audio saved as 'nouns.mp3'.")
+    tts.save("actions.mp3")
+    print("Audio saved.")
 
 # Prepare vocabulary
 vocabready = []
